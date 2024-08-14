@@ -12,6 +12,8 @@ const {
   revalidateTokent,
 } = require('../controllers/auth');
 
+const { validateJwt } = require('../middlewares/validate-jwt');
+
 router.post(
   '/',
   [
@@ -38,6 +40,6 @@ router.post(
   ],
   createUser
 );
-router.get('/renew', revalidateTokent);
+router.get('/renew', validateJwt, revalidateTokent);
 
 module.exports = router;
