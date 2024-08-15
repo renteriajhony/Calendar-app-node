@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const { unsubscribe } = require('../routes/auth');
 
 const UserSchema = Schema({
   name: {
