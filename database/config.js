@@ -7,9 +7,9 @@ const dbConnection = async () => {
       useUnifiedTopology: true,
     }); */
     await mongoose.connect(process.env.DB_URL);
-    console.log('DB online');
+    console.info('DB online');
   } catch (error) {
-    console.log(error);
+    console.error(error);
     throw new Error('Error al inicializar BD');
   }
 };
