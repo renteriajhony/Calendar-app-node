@@ -88,6 +88,8 @@ const revalidateTokent = async (req, res = response) => {
 
   res.send({
     ok: true,
+    uid,
+    name,
     token: jwt,
   });
 };
